@@ -17,18 +17,42 @@ def get():
         dynamodbdata = 'Not Found'
     try:
         import urllib.request
-        with urllib.request.urlopen(dynamodburl) as rds :
+        with urllib.request.urlopen('') as rds :
             rdsdata = rds.read()
     except:
         rdsdata = 'Not Found'
-    return render_template('index.html',dynomodbstatus = dynamodbdata ,rdsstatus = rdsdata)
+    try : 
+        client = MongoClient(mongourl,serverSelectionTimeoutMS = 2000)
+        client.server_info()
+        mongodata = 'Connected'
+    except:
+        mongodata = 'Not Found'
+    return render_template('index.html',dynomodbstatus = dynamodbdata ,rdsstatus = rdsdata ,mongodb = mongodata)
 
 @app.route('/',methods = ['GET','POST'])
 def post():
    if request.method == 'POST':
        if request.form['submit'] == 'submit':
             email = request.form['test']
-            return render_template('index.html',data2 = email)
+            try:
+                import urllib.request
+                with urllib.request.urlopen(dynamodburl) as dynamodb:
+                    dynamodbdata = dynamodb.read()
+            except:
+                dynamodbdata = 'Not Found'
+            try:
+                import urllib.request
+                with urllib.request.urlopen('') as rds :
+                    rdsdata = rds.read()
+            except:
+                rdsdata = 'Not Found'
+            try : 
+                client = MongoClient(mongourl,serverSelectionTimeoutMS = 2000)
+                client.server_info()
+                mongodata = 'Connected'
+            except:
+                mongodata = 'Not Found'
+            return render_template('index.html',data2 = email,dynomodbstatus = dynamodbdata ,rdsstatus = rdsdata ,mongodb = mongodata)
 
 
 
@@ -37,4 +61,4 @@ def post():
 
 
 if __name__ == '__main__':
-    app.run(port = 8000)
+    app.run(port = 8000,debug=True)

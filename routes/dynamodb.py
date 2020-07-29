@@ -1,5 +1,10 @@
 
-from flask import render_template
+from flask import Flask, render_template, request, url_for, redirect
+import json
+import urllib.request, urllib.error, urllib.parse
+import requests
+import pprint
+from env import *
 from . import routes
 
 
@@ -11,12 +16,11 @@ def dynomo():
 def post2():
    if request.method == 'POST':
        if request.form['submit2'] == 'submit2':
-             email = request.form['email']
-             name = request.form['name']
-             phone = request.form['phone']
-             r = requests.post(f"{dynamodburl}?name={name}&email={email}&phone={phone}")
-             import urllib.request
-             with urllib.request.urlopen(dynamodburl) as response:
-               html = response.read()
-             
-             return render_template('dynomodb.html',data2 = html)
+            try:
+                  email = request.form['email']
+                  name = request.form['name']
+                  phone = request.form['phone']
+                  r = requests.post(f"{dynamodburl}?name={name}&email={email}&phone={phone}")
+                  return render_template('dynomodb.html',data2 = 'SuccessFully Added')
+            except:
+                  return render_template('dynomodb.html',data2 = 'Something Went Wrong!!!!')

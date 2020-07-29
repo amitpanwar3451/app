@@ -1,0 +1,548 @@
+<html>
+    <head>
+      <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+body ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+body :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+}
+body ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+}
+body :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+.wrapper {
+  background: #50a3a2;
+  background: linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  margin-top: -200px;
+  overflow: hidden;
+}
+.wrapper.form-success .container h1 {
+          transform: translateY(85px);
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 0;
+  height: 400px;
+  text-align: center;
+}
+.container h1 {
+  font-size: 40px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-     put;
+  font-weight: 200;
+}
+form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+form input {
+          appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color:black;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form input:focus {
+  background-color: white;
+  width: 300px;
+  color: black;
+}
+form button {
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+
+}
+form button:hover {
+  background-color: #f5f7f9;
+}
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  animation: square 25s infinite; 
+  transition-timing-function: linear;
+}
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 2s;
+  animation-duration: 17s;
+}
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  animation-delay: 4s;
+  
+}
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
+}
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bg-bubbles li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 7s;
+}
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 15s;
+  animation-duration: 40s;
+}
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 2s;
+  animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 11s;        
+}
+@keyframes square {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+@keyframes square {
+  0% {
+            transform: translateY(0);
+  }
+  100% {
+            transform: translateY(-700px) rotate(600deg);
+  }
+}
+
+      </style>
+      <style>
+        * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    /*Background Color Animation*/
+    
+    @keyframes colorAnimate
+        {
+          0%   {background: rgb(46, 46, 46);}
+          25%  {background: rgb(41, 90, 131);}
+          50%  {background: rgb(20, 100, 153);}
+          75%  {background: rgb(62, 46, 100);}
+          100% {background: rgb(46, 46, 46);}
+        }
+    
+        @-webkit-keyframes colorAnimate /* Safari and Chrome - necessary duplicate */
+        {
+            0%   {background: rgb(46, 46, 46);}
+            25%  {background: rgb(41, 90, 131);}
+            50%  {background: rgb(20, 100, 153);}
+            75%  {background: rgb(62, 46, 100);}
+            100% {background: rgb(46, 46, 46);}
+        }
+    
+    html, body {
+        font-family: sans-serif;
+        font-size: 100%;
+    }
+    
+    html, body, .wrapper, .sct {
+        height: 100%;
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgb(22, 185, 185);
+    }
+    
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: 400;
+        color: #2d2d2d;
+    }
+    
+    input:active,
+    input:focus,
+    input:visited,
+    input:hover {
+        outline: none;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"]
+     {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1.8rem 1.6rem;
+        background: #fff;
+        border: 1px solid rgb(212, 212, 212);
+        font-family: sans-serif;
+        font-weight: 600;
+        color:black;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 1rem;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -o-transition: all .3s;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        -ms-transition: all .3s;
+        transition: all .3s;
+    }
+    
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        margin: 1.5rem 0;
+        padding: 1.2rem;
+        background: rgb(30, 108, 172);
+        border: 1px solid rgb(212, 212, 212);
+        font-family: sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        color:black;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 1rem;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -o-transition: all .3s;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        -ms-transition: all .3s;
+        transition: all .3s;
+    }
+    
+    input[type="submit"]:active,
+    input[type="submit"]:focus,
+    input[type="submit"]:visited,
+    input[type="submit"]:hover {
+        background: rgb(34, 156, 255);
+    }
+    
+    button,input[type="submit"] {
+        cursor: pointer;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    form > h3 {
+        text-align: center;
+    }
+    
+    .forgot-remember {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .wrapper2 {
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+                            "centerLeft centerRight";
+    }
+    
+    .sct {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .brand {
+        grid-area: centerLeft;
+        background-color: #2d2d2d;
+        animation: colorAnimate 30s;
+        -webkit-animation: colorAnimate 30s;
+        animation-iteration-count: infinite;
+        -webkit-iteration-count: infinite;
+    }
+    
+    .brand > h3 {
+        padding: .75rem;
+        font-weight: 800;
+        outline: 3px solid #fff;
+        color:black;
+    }
+    
+    .login {
+        grid-area: centerRight;
+    }
+    
+    .login > form {
+        width: 400px;
+        margin: 0 3rem;
+    }
+    
+    /*Checkbox*/
+    
+    .control {
+        font-family: arial;
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 5px;
+        padding-top: 3px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+        .control input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+    .control_indicator {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #e6e6e6;
+        border: 0px solid #000000;
+    }
+    
+    .control:hover input ~ .control_indicator,
+    .control input:focus ~ .control_indicator {
+        background: #cccccc;
+    }
+    
+    .control input:checked ~ .control_indicator {
+        background: #2aa1c0;
+    }
+    .control:hover input:not([disabled]):checked ~ .control_indicator,
+    
+    .control input:disabled ~ .control_indicator {
+        background: #e6e6e6;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+    .control_indicator:after {
+        box-sizing: unset;
+        content: '';
+        position: absolute;
+        display: none;
+    }
+    .control input:checked ~ .control_indicator:after {
+        display: block;
+    }
+    .control-checkbox .control_indicator:after {
+        left: 8px;
+        top: 4px;
+        width: 3px;
+        height: 8px;
+        border: solid #ffffff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    .control-checkbox input:disabled ~ .control_indicator:after {
+        border-color: #7b7b7b;
+    }
+    
+    /*Social Sign Up*/
+    
+    .social-sign {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        -ms-align-items: center;
+        align-items: center;
+    }
+    
+    .social-sign a {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 2rem;
+    }
+    
+    .social-sign > a:nth-child(2) {
+        margin: 0 .5rem;
+    }
+    
+    .fa-hand-o-down {
+        margin-top: .5rem;
+    }
+    
+    @media (max-width: 768px) {
+        .wrapper2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(20%, 80vmax);
+        grid-template-areas: 
+                            "centerLeft"
+                            "centerRight";
+        }
+    
+        .login > form {
+            width: 100%;
+            margin: 0 3rem;
+        }
+    }
+    </style>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+<body style="background-color: black;">
+    <div class="wrapper2" style="width: 100%; height: 100%;">
+        <form action = "/mongodb" method = "POST">
+              <h1>MONGODB</h1>
+                <input type="text" style="background-color: gray;" placeholder="NAME" name="name">
+                <input type="text" style="background-color: gray;" placeholder="EMAIL" name="email">
+                <input type="text" style="background-color: gray;" placeholder="PHONE" name="phone">
+                <button type="submit" name="submit" value="submit2" id="login-button">SUBMIT</button><br>
+                <input type="submit" name="submit" value="get_by_name">
+                <input type="submit" name="submit" value="check">
+              </form>
+              <div class="container">
+                <a style="color:white">{{data2}}</a>
+                <a style="color:white;">{{data3}}</a>
+              </div>
+        
+              <br>
+              <br> 
+            </div>
+            
+            <ul class="bg-bubbles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          </div> <!--end login-->
+      
+       </div>
+      
+          </div> <!--end wrapper-->
+  </body>
+</html>
+<script>
+   $("#login-button").click(function(event){
+		 event.preventDefault();
+	 
+	 $('form').fadeOut(500);
+	 $('.wrapper').addClass('form-success');
+});
+</script>

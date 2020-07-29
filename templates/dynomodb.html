@@ -219,13 +219,14 @@ form button:hover {
       <h1>DYNAMODB</h1>
       <form action = "/dynomodb" method = "POST">
         <input type="text" placeholder="NAME" name="name">
-        <input type="password" placeholder="EMAIL" name="email">
-        <input type="password" placeholder="PHONE" name="phone">
-        <button type="submit" name="submit2" value="submit2" id="login-button">SUBMIT</button>
+        <input type="text" placeholder="EMAIL" name="email">
+        <input type="text" placeholder="PHONE" name="phone">
+        <button type="submit" name="submit2" value="submit2" id="login-button">SUBMIT</button><br>
+        <a style="color: white;">{{data2}}</a>
       </form>
-      <div class="fluid-container" style="background-color: gray;">
-        {{data2}}
-      </div>
+
+      <br>
+      <br> 
     </div>
     
     <ul class="bg-bubbles">
@@ -241,7 +242,6 @@ form button:hover {
       <li></li>
     </ul>
   </div>
-  
 </body>
 </html>
 <script>

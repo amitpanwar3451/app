@@ -1,9 +1,10 @@
 #API GATEWAY URL
-dynamodburl = 'https://8eespn2rmg.execute-api.us-east-2.amazonaws.com/dynomodb/dynomodb'
+dynamodburl = 'https://4aojl13x5j.execute-api.us-east-2.amazonaws.com/dynomodb/dynomodb'
 
-#RDS
-RDSHOST = 'rdsdb.ct2h98ebl2el.us-east-2.rds.amazonaws.com'
-RDSPORT = 1433
-RDSUSER = 'admin'
-RDSPASS = 'kishanpanwar'
-RDSDBNAME = 'rdsdb'
+#mongodb
+DBNAME = "TESTsDB"
+COLLECTIONNAME ="TESTCOL"
+USER ="kishanpanwar"
+PWD ="kishan"
+HOST ="3s.19.208.56"
+mongourl = f'mongodb://{USER}:{PWD}@{HOST}:27017/?authSource=admin'
