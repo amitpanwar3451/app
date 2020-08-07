@@ -6,5 +6,5 @@ DBNAME = "TESTsDB"
 COLLECTIONNAME ="TESTCOL"
 USER ="kishanpanwar"
 PWD ="kishan"
-HOST ="3s.19.208.56"
+HOST ="20.55.20.67"
 mongourl = f'mongodb://{USER}:{PWD}@{HOST}:27017/?authSource=admin'
